@@ -22,14 +22,14 @@ def slack_events():
             channel = event["channel"]
             text = event["text"]
 
-            # オウム返しメッセージ送信
-            response = requests.post(SLACK_URL, headers={
-                "Authorization": f"Bearer {SLACK_BOT_TOKEN}",
-                "Content-Type": "application/json"
-            }, json={
-                "channel": channel,
-                "text": f"🦜 {text}"
-            })
+            # # オウム返しメッセージ送信
+            # response = requests.post(SLACK_URL, headers={
+            #     "Authorization": f"Bearer {SLACK_BOT_TOKEN}",
+            #     "Content-Type": "application/json"
+            # }, json={
+            #     "channel": channel,
+            #     "text": f"🦜 {text}"
+            # })
 
     return make_response("OK", 200)
 
